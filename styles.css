@@ -1,0 +1,191 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Calibri, "Calibri Light", "Segoe UI", sans-serif;
+    font-weight: 600; /* 默认所有文本中等粗体 */
+}
+
+body {
+    background-color: #f0f2f7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 520px; /* 原来的390px增加三分之一 */
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+
+/* 顶部导航栏 */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 14px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-left, .nav-right {
+    width: 24px;
+    height: 24px;
+}
+
+.nav-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-title {
+    font-size: 17px;
+    color: #000; /* 改为纯黑色 */
+    font-weight: 900; /* 增加粗细 */
+    line-height: 1.2;
+    text-shadow: 0 0 0.5px #000; /* 添加轻微文本阴影增强黑度 */
+}
+
+.nav-url {
+    font-size: 13px;
+    color: #777;
+    font-weight: 400;
+    margin-top: 1px;
+}
+
+.container {
+    width: 100%;
+    background-color: transparent;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+/* Logo 部分 */
+.logo-container {
+    background-color: white;
+    text-align: center;
+    padding: 20px 0 15px;
+}
+
+.logo {
+    width: 250px; /* 缩小LOGO */
+    height: auto;
+    margin-bottom: 7px;
+}
+
+.ownership-text {
+    font-size: 12px;
+    color: #000; /* 改为黑色 */
+    margin-top: 3px;
+    line-height: 1.3;
+    font-weight: 900; /* 加重粗体 */
+    width: 250px; /* 与LOGO宽度一致 */
+    margin: 3px auto 0; /* 居中 */
+    text-shadow: 0 0 0.5px #000; /* 添加轻微文本阴影增强黑度 */
+}
+
+/* 标题部分 */
+.title-section {
+    background-color: #f0f2f7;
+    padding: 20px 0 18px;
+    text-align: center;
+}
+
+.title-section h1 {
+    font-size: 32px;
+    color: #000; /* 改为纯黑色 */
+    font-weight: 900; /* 增加粗细 */
+    letter-spacing: -0.5px;
+    text-shadow: 0 0 0.5px #000; /* 添加轻微文本阴影增强黑度 */
+}
+
+/* 验证标志 */
+.verification-badge {
+    background-color: #e3f7e6;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    margin: 8px 8px;
+    border-radius: 10px;
+}
+
+.check-icon {
+    background-color: #5c9461;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    margin-right: 12px;
+    font-weight: 900; /* 加重勾号的粗细 */
+}
+
+.badge-text {
+    color: #5c9461;
+    font-size: 22px;
+    font-weight: 900; /* 更粗 */
+    letter-spacing: 0.2px;
+}
+
+/* 证书详情 */
+.certificate-details {
+    padding: 0;
+    background-color: white;
+    border-radius: 10px;
+    margin: 8px 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.detail-row {
+    padding: 18px 15px;
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+/* 增强分隔线样式 */
+.detail-row::after {
+    content: '';
+    position: absolute;
+    left: 15px; /* 左边距与内容对齐 */
+    right: 15px; /* 右边距与内容对齐 */
+    bottom: 0;
+    height: 1px;
+    background-color: #dddddd; /* 更明显的灰色 */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.05); /* 轻微阴影效果 */
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-row:last-child::after {
+    display: none; /* 最后一行不显示分隔线 */
+}
+
+.detail-label {
+    font-size: 18px;
+    color: #000; /* 改为纯黑色 */
+    font-weight: 900; /* 增加粗细 */
+    margin-bottom: 16px;
+    text-shadow: 0 0 0.5px #000; /* 添加轻微文本阴影增强黑度 */
+}
+
+.detail-value {
+    font-size: 18px;
+    color: #333; /* 从#555改为#333，加深颜色 */
+    line-height: 1.4;
+    font-weight: 500; /* 从400增加到500，稍微加粗 */
+    padding-bottom: 5px;
+    letter-spacing: 0.2px; /* 轻微增加字母间距，提高清晰度 */
+}
