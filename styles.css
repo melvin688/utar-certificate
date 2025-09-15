@@ -7,14 +7,26 @@
     font-weight: 600; /* 默认所有文本中等粗体 */
 }
 
+html {
+    overflow-x: hidden; /* 防止水平滚动 */
+}
+
 body {
     background-color: #f0f2f7;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    max-width: 520px; /* 原来的390px增加三分之一 */
+    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
+    font-size: 14px; /* 减小默认字体大小以适应手机屏幕 */
+    position: fixed; /* 固定位置，防止iOS设备上的弹性滚动 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto; /* 允许垂直滚动 */
 }
 
 
@@ -25,7 +37,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #f2f2f2;
-    padding: 14px 15px;
+    padding: 8px 15px; /* 减少上下padding */
     position: sticky;
     top: 0;
     z-index: 100;
@@ -45,7 +57,7 @@ body {
 }
 
 .nav-title {
-    font-size: 17px;
+    font-size: 15px; /* 减小字体 */
     color: #000; /* 改为纯黑色 */
     font-weight: 900; /* 增加粗细 */
     line-height: 1.2;
@@ -53,10 +65,10 @@ body {
 }
 
 .nav-url {
-    font-size: 13px;
+    font-size: 11px; /* 减小字体 */
     color: #777;
     font-weight: 400;
-    margin-top: 1px;
+    margin-top: 0px; /* 移除顶部边距 */
 }
 
 .container {
@@ -64,75 +76,87 @@ body {
     background-color: transparent;
     overflow: hidden;
     margin: 0 auto;
-    padding-bottom: 30px;
+    padding-bottom: 10px; /* 减少底部填充 */
 }
 
 /* Logo 部分 */
 .logo-container {
     background-color: white;
     text-align: center;
-    padding: 20px 0 15px;
+    padding: 10px 0 8px; /* 进一步减少上下padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 确保内容居中 */
+    justify-content: center;
 }
 
 .logo {
-    width: 250px; /* 缩小LOGO */
+    width: 33.3vw; /* 设置为视口宽度的三分之一 */
+    max-width: 150px; /* 设置最大宽度，防止在大屏幕上过大 */
     height: auto;
-    margin-bottom: 7px;
+    margin-bottom: 2px;
+    display: block; /* 确保可以居中 */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .ownership-text {
-    font-size: 12px;
+    font-size: 8px; /* 进一步减小字体大小 */
     color: #000; /* 改为黑色 */
-    margin-top: 3px;
-    line-height: 1.3;
+    margin-top: 2px;
+    line-height: 1.2;
     font-weight: 900; /* 加重粗体 */
-    width: 250px; /* 与LOGO宽度一致 */
-    margin: 3px auto 0; /* 居中 */
-    text-shadow: 0 0 0.5px #000; /* 添加轻微文本阴影增强黑度 */
+    width: 33.3vw; /* 与LOGO宽度一致，视口宽度的三分之一 */
+    max-width: 150px; /* 设置最大宽度 */
+    margin: 0 auto; /* 居中 */
+    text-shadow: 0 0 0.3px #000; /* 添加轻微文本阴影增强黑度 */
 }
 
 /* 标题部分 */
 .title-section {
     background-color: #f0f2f7;
-    padding: 20px 0 18px;
+    padding: 10px 0 8px; /* 减少上下填充 */
     text-align: center;
 }
 
 .title-section h1 {
-    font-size: 32px;
+    font-size: 20px; /* 进一步减小标题字体大小 */
     color: #000; /* 改为纯黑色 */
     font-weight: 900; /* 增加粗细 */
-    letter-spacing: -0.5px;
+    letter-spacing: -0.3px;
     text-shadow: 0 0 0.5px #000; /* 添加轻微文本阴影增强黑度 */
 }
 
 /* 验证标志 */
 .verification-badge {
     background-color: #e3f7e6;
-    padding: 14px 18px;
+    padding: 8px 15px; /* 减少padding */
     display: flex;
     align-items: center;
-    margin: 8px 8px;
-    border-radius: 10px;
+    margin: 4px 8px; /* 减少上下margin */
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(92, 148, 97, 0.1); /* 添加轻微阴影效果增强质感 */
 }
 
 .check-icon {
     background-color: #5c9461;
     color: white;
-    width: 28px;
-    height: 28px;
+    width: 18px; /* 缩小图标 */
+    height: 18px; /* 缩小图标 */
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
-    margin-right: 12px;
-    font-weight: 900; /* 加重勾号的粗细 */
+    font-size: 14px; /* 减小字体 */
+    margin-right: 8px; /* 减少右边距 */
+    font-weight: 400; /* 减轻粗细使勾号看起来更直 */
+    line-height: 1;
+    transform: scale(1.2, 1); /* 稍微拉伸勾号让它更直 */
 }
 
 .badge-text {
     color: #5c9461;
-    font-size: 22px;
+    font-size: 14px; /* 进一步减小字体 */
     font-weight: 900; /* 更粗 */
     letter-spacing: 0.2px;
 }
@@ -142,13 +166,13 @@ body {
     padding: 0;
     background-color: white;
     border-radius: 10px;
-    margin: 8px 8px;
+    margin: 4px 8px; /* 减少上下margin */
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .detail-row {
-    padding: 18px 15px;
+    padding: 4px 15px; /* 进一步减少上下padding */
     position: relative;
     border-bottom: 1px solid #e6e6e6;
 }
@@ -161,8 +185,8 @@ body {
     right: 15px; /* 右边距与内容对齐 */
     bottom: 0;
     height: 1px;
-    background-color: #dddddd; /* 更明显的灰色 */
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.05); /* 轻微阴影效果 */
+    background-color: #e6e6e6; /* 浅一点的灰色，更接近参考图 */
+    box-shadow: none; /* 移除阴影 */
 }
 
 .detail-row:last-child {
@@ -174,18 +198,18 @@ body {
 }
 
 .detail-label {
-    font-size: 18px;
+    font-size: 12px; /* 进一步减小 */
     color: #000; /* 改为纯黑色 */
     font-weight: 900; /* 增加粗细 */
-    margin-bottom: 16px;
-    text-shadow: 0 0 0.5px #000; /* 添加轻微文本阴影增强黑度 */
+    margin-bottom: 4px; /* 进一步减少与值之间的间距 */
+    text-shadow: 0 0 0.3px #000; /* 添加轻微文本阴影增强黑度 */
 }
 
 .detail-value {
-    font-size: 18px;
+    font-size: 12px; /* 进一步减小 */
     color: #333; /* 从#555改为#333，加深颜色 */
-    line-height: 1.4;
+    line-height: 1.2; /* 减小行高 */
     font-weight: 500; /* 从400增加到500，稍微加粗 */
-    padding-bottom: 5px;
-    letter-spacing: 0.2px; /* 轻微增加字母间距，提高清晰度 */
+    padding-bottom: 0px; /* 移除底部填充 */
+    letter-spacing: 0.1px; /* 轻微减小字母间距 */
 }
