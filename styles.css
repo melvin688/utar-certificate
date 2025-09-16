@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Calibri, "Calibri Light", "Segoe UI", sans-serif;
+    font-family: Calibri, Arial, "Segoe UI", sans-serif;
     font-weight: 600; /* 默认所有文本中等粗体 */
 }
 
@@ -181,8 +181,9 @@ body {
 .detail-label {
     font-size: 16px; /* 增加字体大小 */
     color: #000; /* 保持纯黑色 */
-    font-weight: 600; /* 调整字体粗细，从700减少到600 */
+    font-weight: 700; /* 增加字体粗细，使其更浓 */
     margin-bottom: 8px; /* 增加与值之间的间距 */
+    letter-spacing: -0.2px; /* 减少字母间距，使文字看起来更紧凑和浓重 */
 }
 
 .detail-value {
