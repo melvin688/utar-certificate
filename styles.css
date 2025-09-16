@@ -88,7 +88,7 @@ body {
     color: #000; /* 保持纯黑色 */
     font-weight: 700; /* 保持字体粗细 */
     letter-spacing: -0.2px;
-    width: 82.5%; /* 与证书详情保持一致的宽度 */
+    width: 91%; /* 与证书详情保持一致的宽度 */
     margin: 0 auto; /* 居中显示 */
     margin-bottom: 2px; /* 添加下边距 */
 }
@@ -97,7 +97,7 @@ body {
     font-size: 12px;
     color: #999;
     font-weight: 400;
-    width: 82.5%; /* 与其他内容保持一致宽度 */
+    width: 91%; /* 与其他内容保持一致宽度 */
     margin: 0 auto; /* 居中显示 */
     text-align: center;
 }
@@ -111,7 +111,7 @@ body {
     margin: 6px auto; /* 居中显示 */
     border-radius: 8px;
     box-shadow: 0 1px 2px rgba(92, 148, 97, 0.1); /* 保持轻微阴影效果 */
-    width: 82.5%; /* 将宽度增加10% */
+    width: 91%; /* 再增加10% */
 }
 
 .check-icon {
@@ -145,7 +145,7 @@ body {
     margin: 6px auto; /* 居中显示 */
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    width: 82.5%; /* 将宽度增加10% */
+    width: 91%; /* 再增加10% */
     position: relative; /* 添加相对定位，为下划线做准备 */
 }
 
@@ -175,6 +175,11 @@ body {
     display: none; /* 最后一行不显示分隔线 */
 }
 
+/* 特定为最后一行添加下划线样式 */
+.last-row .university-underline {
+    display: block;
+}
+
 .detail-label {
     font-size: 11px; /* 保持字体大小 */
     color: #000; /* 保持纯黑色 */
@@ -191,11 +196,29 @@ body {
     letter-spacing: 0.1px; /* 保持字母间距 */
 }
 
-/* 下划线 */
-.red-underline {
-    height: 1px;
-    background-color: #e6e6e6; /* 灰色，与其他分隔线保持一致 */
-    width: 100%;
-    margin: 0;
+/* 大学名称下方的下划线 */
+/* 大学名称下方的下划线 */
+.university-text {
+    display: block;
     position: relative;
+}
+
+/* 添加线条在文本下方 */
+.university-text::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px; /* 增加与文本的距离 */
+    width: 100%;
+    height: 1px;
+    background-color: #d9d9d9; /* 更浅的灰色，与参考图匹配 */
+}
+
+/* 灰线 */
+.gray-line {
+    height: 1px;
+    background-color: #d9d9d9; /* 调整灰线颜色与下划线一致 */
+    width: 91%;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
