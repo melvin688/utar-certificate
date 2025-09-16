@@ -187,9 +187,9 @@ body {
 
 .detail-value {
     font-size: 18px; /* 增加字体大小 */
-    color: #333; /* 保持颜色 */
+    color: #222; /* 调整为更深的颜色 */
     line-height: 1.5; /* 增加行高 */
-    font-weight: 400; /* 降低字体粗细，更接近参考图 */
+    font-weight: 500; /* 增加字体粗细 */
     padding-bottom: 3px; /* 保持底部填充 */
     letter-spacing: 0.2px; /* 增加字母间距 */
 }
@@ -199,8 +199,8 @@ body {
 .university-text {
     display: block;
     position: relative;
-    color: #333; /* 与其他值文本保持一致 */
-    font-weight: 400; /* 调整为与其他值相同的粗细 */
+    color: #222; /* 调整为更深的颜色 */
+    font-weight: 500; /* 增加字体粗细 */
 }
 
 /* 添加线条在文本下方 */
@@ -226,6 +226,6 @@ body {
 
 /* Information Technology 文本的样式 */
 .lighter-text {
-    font-weight: 400; /* 与其他值文本保持一致的粗细 */
-    color: #333; /* 与其他值文本保持一致的颜色 */
+    font-weight: 500; /* 与其他值文本保持一致的粗细 */
+    color: #222; /* 与其他值文本保持一致的颜色 */
 }
