@@ -65,8 +65,8 @@ body {
 
 .nav-title {
     font-size: 16px; /* 调整字体大小 */
-    color: #000; /* 改为纯黑色 */
-    font-weight: 700; /* 调整粗细 */
+    color: #000; /* 保持纯黑色 */
+    font-weight: 700; /* 保持粗细 */
     line-height: 1.2;
 }
 
@@ -84,6 +84,8 @@ body {
     margin: 0 auto;
     padding-bottom: 10px; /* 减少底部填充 */
 }
+
+/* 移除了证书头部相关样式 */
 
 /* Logo 部分 */
 .logo-container {
@@ -120,40 +122,43 @@ body {
 /* 标题部分 */
 .title-section {
     background-color: #f0f2f7;
-    padding: 12px 0 10px; /* 减少上下填充 */
+    padding: 16px 0 14px; /* 增加上下填充 */
     text-align: center;
 }
 
 .title-section h1 {
-    font-size: 20px; /* 减小标题字体大小 */
+    font-size: 20px; /* 保持字体大小 */
     color: #000; /* 保持纯黑色 */
     font-weight: 700; /* 保持字体粗细 */
     letter-spacing: -0.2px;
+    width: 75%; /* 与证书详情保持一致的宽度 */
+    margin: 0 auto; /* 居中显示 */
 }
 
 /* 验证标志 */
 .verification-badge {
     background-color: #e3f7e6;
-    padding: 8px 15px; /* 减少padding */
+    padding: 10px 15px; /* 增加padding */
     display: flex;
     align-items: center;
-    margin: 6px 8px; /* 减少上下margin */
+    margin: 6px auto; /* 居中显示 */
     border-radius: 8px;
     box-shadow: 0 1px 2px rgba(92, 148, 97, 0.1); /* 保持轻微阴影效果 */
+    width: 75%; /* 与证书详情区域保持一致的宽度 */
 }
 
 .check-icon {
     background-color: #5c9461;
     color: white;
-    width: 18px; /* 减小图标大小 */
-    height: 18px; /* 减小图标大小 */
+    width: 20px; /* 增大图标大小 */
+    height: 20px; /* 增大图标大小 */
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 12px; /* 减小字体 */
-    margin-right: 8px; /* 保持右边距 */
-    font-weight: 400; /* 保持粗细 */
+    font-size: 14px; /* 增大字体 */
+    margin-right: 10px; /* 增加右边距 */
+    font-weight: 400; /* 保持字体粗细 */
     line-height: 1;
     transform: scale(1.2, 1); /* 保持勾号样式 */
 }
@@ -170,13 +175,14 @@ body {
     padding: 0;
     background-color: white;
     border-radius: 10px;
-    margin: 6px 8px; /* 减少上下margin */
+    margin: 6px auto; /* 居中显示 */
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    width: 75%; /* 横向缩小为原来的四分之三 */
 }
 
 .detail-row {
-    padding: 6px 15px; /* 减少上下padding */
+    padding: 10px 15px; /* 增加上下padding以拉长高度 */
     position: relative;
     border-bottom: 1px solid #e6e6e6;
 }
@@ -202,17 +208,17 @@ body {
 }
 
 .detail-label {
-    font-size: 11px; /* 减小字体大小 */
+    font-size: 11px; /* 保持字体大小 */
     color: #000; /* 保持纯黑色 */
     font-weight: 700; /* 保持字体粗细 */
-    margin-bottom: 3px; /* 减少与值之间的间距 */
+    margin-bottom: 6px; /* 增加与值之间的间距 */
 }
 
 .detail-value {
-    font-size: 12px; /* 减小字体大小 */
+    font-size: 12px; /* 保持字体大小 */
     color: #333; /* 保持颜色 */
-    line-height: 1.2; /* 减小行高 */
+    line-height: 1.4; /* 增加行高 */
     font-weight: 500; /* 保持字体粗细 */
-    padding-bottom: 1px; /* 减少底部填充 */
+    padding-bottom: 3px; /* 增加底部填充 */
     letter-spacing: 0.1px; /* 保持字母间距 */
 }
