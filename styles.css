@@ -21,13 +21,8 @@ body {
     margin: 0 auto;
     padding: 0;
     font-size: 14px; /* 减小默认字体大小以适应手机屏幕 */
-    position: fixed; /* 固定位置，防止iOS设备上的弹性滚动 */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    position: relative; /* 改为相对定位，允许页面正常滚动 */
     overflow-y: auto; /* 允许垂直滚动 */
-    max-height: 100vh; /* 确保不超过视口高度 */
 }
 
 
@@ -150,20 +145,20 @@ body {
 }
 
 .detail-row {
-    padding: 10px 15px; /* 增加上下padding以拉长高度 */
+    padding: 14px 15px; /* 增加上下padding以拉长高度 */
     position: relative;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid #eaeaea; /* 使用更浅的边框颜色 */
 }
 
 /* 增强分隔线样式 */
 .detail-row::after {
     content: '';
     position: absolute;
-    left: 15px; /* 左边距与内容对齐 */
-    right: 15px; /* 右边距与内容对齐 */
+    left: 0; /* 边缘到边缘 */
+    right: 0; /* 边缘到边缘 */
     bottom: 0;
     height: 1px;
-    background-color: #e6e6e6; /* 浅一点的灰色，更接近参考图 */
+    background-color: #eaeaea; /* 更浅的灰色，与参考图匹配 */
     box-shadow: none; /* 移除阴影 */
 }
 
@@ -181,19 +176,19 @@ body {
 }
 
 .detail-label {
-    font-size: 11px; /* 保持字体大小 */
+    font-size: 12px; /* 调整字体大小 */
     color: #000; /* 保持纯黑色 */
-    font-weight: 700; /* 保持字体粗细 */
-    margin-bottom: 6px; /* 增加与值之间的间距 */
+    font-weight: 600; /* 调整字体粗细，从700减少到600 */
+    margin-bottom: 8px; /* 增加与值之间的间距 */
 }
 
 .detail-value {
-    font-size: 12px; /* 保持字体大小 */
+    font-size: 14px; /* 增加字体大小 */
     color: #333; /* 保持颜色 */
-    line-height: 1.4; /* 增加行高 */
-    font-weight: 500; /* 保持字体粗细 */
-    padding-bottom: 3px; /* 增加底部填充 */
-    letter-spacing: 0.1px; /* 保持字母间距 */
+    line-height: 1.5; /* 增加行高 */
+    font-weight: 400; /* 降低字体粗细，更接近参考图 */
+    padding-bottom: 3px; /* 保持底部填充 */
+    letter-spacing: 0.2px; /* 增加字母间距 */
 }
 
 /* 大学名称下方的下划线 */
@@ -201,6 +196,8 @@ body {
 .university-text {
     display: block;
     position: relative;
+    color: #333; /* 与其他值文本保持一致 */
+    font-weight: 400; /* 调整为与其他值相同的粗细 */
 }
 
 /* 添加线条在文本下方 */
@@ -208,17 +205,23 @@ body {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -8px; /* 增加与文本的距离 */
+    bottom: -6px; /* 略微调整与文本的距离 */
     width: 100%;
     height: 1px;
-    background-color: #d9d9d9; /* 更浅的灰色，与参考图匹配 */
+    background-color: #eaeaea; /* 与其他分隔线保持一致的颜色 */
 }
 
 /* 灰线 */
 .gray-line {
     height: 1px;
-    background-color: #d9d9d9; /* 调整灰线颜色与下划线一致 */
+    background-color: #eaeaea; /* 调整灰线颜色与其他分隔线保持一致 */
     width: 91%;
     margin: 0 auto;
     margin-bottom: 20px;
+}
+
+/* Information Technology 文本的样式 */
+.lighter-text {
+    font-weight: 300; /* 设置更细的字体粗细 */
+    color: #444; /* 稍微浅一点的颜色 */
 }
