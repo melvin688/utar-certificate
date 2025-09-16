@@ -7,6 +7,12 @@
     font-weight: 600; /* 默认所有文本中等粗体 */
 }
 
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: local('Helvetica Neue Bold'), local('HelveticaNeue-Bold');
+    font-weight: 700;
+}
+
 html {
     overflow-x: hidden; /* 防止水平滚动 */
 }
@@ -181,18 +187,21 @@ body {
 .detail-label {
     font-size: 16px; /* 增加字体大小 */
     color: #000; /* 保持纯黑色 */
-    font-weight: 700; /* 增加字体粗细，使其更浓 */
+    font-weight: 800; /* 进一步增加字体粗细，使标签更黑 */
     margin-bottom: 8px; /* 增加与值之间的间距 */
-    letter-spacing: -0.2px; /* 减少字母间距，使文字看起来更紧凑和浓重 */
+    letter-spacing: -0.3px; /* 进一步减少字母间距，使文字看起来更紧凑和浓重 */
+    font-family: Arial, Helvetica, sans-serif; /* 使用更黑的字体 */
+    text-rendering: optimizeLegibility; /* 改善文本渲染 */
+    -webkit-font-smoothing: antialiased; /* 在WebKit浏览器中改善文本渲染 */
 }
 
 .detail-value {
     font-size: 18px; /* 增加字体大小 */
     color: #222; /* 调整为更深的颜色 */
     line-height: 1.5; /* 增加行高 */
-    font-weight: 500; /* 增加字体粗细 */
+    font-weight: 600; /* 进一步增加字体粗细，使其更加浓重 */
     padding-bottom: 3px; /* 保持底部填充 */
-    letter-spacing: 0.2px; /* 增加字母间距 */
+    letter-spacing: 0px; /* 调整字母间距，使其更加紧凑 */
 }
 
 /* 大学名称下方的下划线 */
@@ -201,7 +210,8 @@ body {
     display: block;
     position: relative;
     color: #222; /* 调整为更深的颜色 */
-    font-weight: 500; /* 增加字体粗细 */
+    font-weight: 600; /* 进一步增加字体粗细，与其他值保持一致 */
+    letter-spacing: 0px; /* 调整字母间距，与其他值保持一致 */
 }
 
 /* 添加线条在文本下方 */
@@ -227,6 +237,7 @@ body {
 
 /* Information Technology 文本的样式 */
 .lighter-text {
-    font-weight: 500; /* 与其他值文本保持一致的粗细 */
+    font-weight: 600; /* 与其他值文本保持一致的粗细 */
     color: #222; /* 与其他值文本保持一致的颜色 */
+    letter-spacing: 0px; /* 调整字母间距，与其他值保持一致 */
 }
