@@ -226,6 +226,6 @@ body {
 
 /* Information Technology 文本的样式 */
 .lighter-text {
-    font-weight: 300; /* 设置更细的字体粗细 */
-    color: #444; /* 稍微浅一点的颜色 */
+    font-weight: 400; /* 与其他值文本保持一致的粗细 */
+    color: #333; /* 与其他值文本保持一致的颜色 */
 }
