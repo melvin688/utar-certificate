@@ -27,6 +27,7 @@ body {
     right: 0;
     bottom: 0;
     overflow-y: auto; /* 允许垂直滚动 */
+    max-height: 100vh; /* 确保不超过视口高度 */
 }
 
 
@@ -36,18 +37,24 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f2f2f2;
-    padding: 8px 15px; /* 减少上下padding */
+    background-color: #fff;
+    padding: 10px 15px; /* 减少上下padding */
     position: sticky;
     top: 0;
     z-index: 100;
     width: 100%;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .nav-left, .nav-right {
     width: 24px;
     height: 24px;
+    font-size: 18px; /* 减小字体大小 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-weight: 400; /* 减轻字体粗细 */
 }
 
 .nav-center {
@@ -57,18 +64,17 @@ body {
 }
 
 .nav-title {
-    font-size: 15px; /* 减小字体 */
+    font-size: 16px; /* 调整字体大小 */
     color: #000; /* 改为纯黑色 */
-    font-weight: 900; /* 增加粗细 */
+    font-weight: 700; /* 调整粗细 */
     line-height: 1.2;
-    text-shadow: 0 0 0.5px #000; /* 添加轻微文本阴影增强黑度 */
 }
 
 .nav-url {
-    font-size: 11px; /* 减小字体 */
-    color: #777;
+    font-size: 11px; /* 减小字体大小 */
+    color: #999;
     font-weight: 400;
-    margin-top: 0px; /* 移除顶部边距 */
+    margin-top: -1px; /* 调整与标题的间距 */
 }
 
 .container {
@@ -83,7 +89,7 @@ body {
 .logo-container {
     background-color: white;
     text-align: center;
-    padding: 10px 0 8px; /* 进一步减少上下padding */
+    padding: 15px 0 10px; /* 减少上下padding */
     display: flex;
     flex-direction: column;
     align-items: center; /* 确保内容居中 */
@@ -94,37 +100,35 @@ body {
     width: 33.3vw; /* 设置为视口宽度的三分之一 */
     max-width: 150px; /* 设置最大宽度，防止在大屏幕上过大 */
     height: auto;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
     display: block; /* 确保可以居中 */
     margin-left: auto;
     margin-right: auto;
 }
 
 .ownership-text {
-    font-size: 8px; /* 进一步减小字体大小 */
-    color: #000; /* 改为黑色 */
-    margin-top: 2px;
-    line-height: 1.2;
-    font-weight: 900; /* 加重粗体 */
-    width: 33.3vw; /* 与LOGO宽度一致，视口宽度的三分之一 */
+    font-size: 6px; /* 进一步减小字体大小，更接近图2效果 */
+    color: #000; /* 保持黑色 */
+    margin-top: 3px;
+    line-height: 1.1;
+    font-weight: 600; /* 调整粗体 */
+    width: 33.3vw; /* 与LOGO宽度一致 */
     max-width: 150px; /* 设置最大宽度 */
     margin: 0 auto; /* 居中 */
-    text-shadow: 0 0 0.3px #000; /* 添加轻微文本阴影增强黑度 */
 }
 
 /* 标题部分 */
 .title-section {
     background-color: #f0f2f7;
-    padding: 10px 0 8px; /* 减少上下填充 */
+    padding: 12px 0 10px; /* 减少上下填充 */
     text-align: center;
 }
 
 .title-section h1 {
-    font-size: 20px; /* 进一步减小标题字体大小 */
-    color: #000; /* 改为纯黑色 */
-    font-weight: 900; /* 增加粗细 */
-    letter-spacing: -0.3px;
-    text-shadow: 0 0 0.5px #000; /* 添加轻微文本阴影增强黑度 */
+    font-size: 20px; /* 减小标题字体大小 */
+    color: #000; /* 保持纯黑色 */
+    font-weight: 700; /* 保持字体粗细 */
+    letter-spacing: -0.2px;
 }
 
 /* 验证标志 */
@@ -133,31 +137,31 @@ body {
     padding: 8px 15px; /* 减少padding */
     display: flex;
     align-items: center;
-    margin: 4px 8px; /* 减少上下margin */
+    margin: 6px 8px; /* 减少上下margin */
     border-radius: 8px;
-    box-shadow: 0 1px 2px rgba(92, 148, 97, 0.1); /* 添加轻微阴影效果增强质感 */
+    box-shadow: 0 1px 2px rgba(92, 148, 97, 0.1); /* 保持轻微阴影效果 */
 }
 
 .check-icon {
     background-color: #5c9461;
     color: white;
-    width: 18px; /* 缩小图标 */
-    height: 18px; /* 缩小图标 */
+    width: 18px; /* 减小图标大小 */
+    height: 18px; /* 减小图标大小 */
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px; /* 减小字体 */
-    margin-right: 8px; /* 减少右边距 */
-    font-weight: 400; /* 减轻粗细使勾号看起来更直 */
+    font-size: 12px; /* 减小字体 */
+    margin-right: 8px; /* 保持右边距 */
+    font-weight: 400; /* 保持粗细 */
     line-height: 1;
-    transform: scale(1.2, 1); /* 稍微拉伸勾号让它更直 */
+    transform: scale(1.2, 1); /* 保持勾号样式 */
 }
 
 .badge-text {
     color: #5c9461;
-    font-size: 14px; /* 进一步减小字体 */
-    font-weight: 900; /* 更粗 */
+    font-size: 13px; /* 减小字体 */
+    font-weight: 700; /* 调整粗细 */
     letter-spacing: 0.2px;
 }
 
@@ -166,13 +170,13 @@ body {
     padding: 0;
     background-color: white;
     border-radius: 10px;
-    margin: 4px 8px; /* 减少上下margin */
+    margin: 6px 8px; /* 减少上下margin */
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .detail-row {
-    padding: 4px 15px; /* 进一步减少上下padding */
+    padding: 6px 15px; /* 减少上下padding */
     position: relative;
     border-bottom: 1px solid #e6e6e6;
 }
@@ -198,18 +202,17 @@ body {
 }
 
 .detail-label {
-    font-size: 12px; /* 进一步减小 */
-    color: #000; /* 改为纯黑色 */
-    font-weight: 900; /* 增加粗细 */
-    margin-bottom: 4px; /* 进一步减少与值之间的间距 */
-    text-shadow: 0 0 0.3px #000; /* 添加轻微文本阴影增强黑度 */
+    font-size: 11px; /* 减小字体大小 */
+    color: #000; /* 保持纯黑色 */
+    font-weight: 700; /* 保持字体粗细 */
+    margin-bottom: 3px; /* 减少与值之间的间距 */
 }
 
 .detail-value {
-    font-size: 12px; /* 进一步减小 */
-    color: #333; /* 从#555改为#333，加深颜色 */
+    font-size: 12px; /* 减小字体大小 */
+    color: #333; /* 保持颜色 */
     line-height: 1.2; /* 减小行高 */
-    font-weight: 500; /* 从400增加到500，稍微加粗 */
-    padding-bottom: 0px; /* 移除底部填充 */
-    letter-spacing: 0.1px; /* 轻微减小字母间距 */
+    font-weight: 500; /* 保持字体粗细 */
+    padding-bottom: 1px; /* 减少底部填充 */
+    letter-spacing: 0.1px; /* 保持字母间距 */
 }
